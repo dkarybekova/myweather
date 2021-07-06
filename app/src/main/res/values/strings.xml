@@ -1,7 +1,3 @@
 <resources>
     <string name="app_name">weather</string>
-    <string name="text1">Урок 23</string>
-    <string name="text2">Домашнее задание 23</string>
-    <string name="button">Кнопка</string>
-    <string name="text_first">Измените цвет и размер текста в TextView а с button измените background(фон),размер и запустите приложения.</string>
 </resources>
