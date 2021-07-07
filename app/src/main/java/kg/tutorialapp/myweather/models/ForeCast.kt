@@ -35,7 +35,7 @@ data class HourlyForeCast(
     var temp: Double? = null,
     var weather: List<Weather>? = null,
     @SerializedName("pop")
-    var probability: Int? = null
+    var probability: Double? = null
 )
 
 data class DailyForeCast(
@@ -44,7 +44,7 @@ data class DailyForeCast(
     var temp: Temperature? = null,
     var weather: List<Weather>? = null,
     @SerializedName("pop")
-    var probability: Int? = null
+    var probability: Double? = null
 )
 
 data class Temperature(
