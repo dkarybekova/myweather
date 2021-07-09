@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Weather</string>
+    <string name="text1">0</string>
+    <string name="Button"> Start work on the main thread</string>
+    <string name="Button2">Show toast</string>
+    <string name="Switch">Switch</string>
+    <string name="checkbox">CheckBox</string>
 </resources>

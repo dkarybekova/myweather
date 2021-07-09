@@ -10,12 +10,14 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
+    private var workResult = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        fetchWeatherUsingQuery()
+//        fetchWeatherUsingQuery()
+        setup()
     }
 
     private fun fetchWeatherUsingQuery() {
@@ -30,9 +32,32 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
+
             override fun onFailure(call: Call<ForeCast>, t: Throwable) {
                 Toast.makeText(this@MainActivity, t.message, Toast.LENGTH_LONG).show()
             }
         })
+    }
+
+    private fun setup() {
+        btn_start.setOnClickListener {
+            doSomeWork()
+        }
+        btn_show_toast.setOnClickListener {
+            Toast.makeText(this, "Hello", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun doSomeWork() {
+        Thread(Runnable {
+            for (i in 0..4) {
+                Thread.sleep(1000)
+                workResult++
+            }
+            runOnUiThread {
+                tv_counter.text = workResult.toString()
+            }
+        }).start()
+
     }
 }
