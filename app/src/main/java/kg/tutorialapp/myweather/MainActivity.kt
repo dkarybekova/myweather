@@ -11,6 +11,8 @@ import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import kg.tutorialapp.myweather.models.ForeCast
+import kg.tutorialapp.myweather.storage.ForeCastDatabase
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,6 +30,8 @@ class MainActivity : AppCompatActivity() {
         }
         btn_show_toast.setOnClickListener {
             Toast.makeText(this, "Hello", Toast.LENGTH_LONG).show()
+
+            ForeCastDatabase.getInstance(applicationContext).forecastDao().insert(ForeCast(lat = 21341.000))
         }
     }
 
