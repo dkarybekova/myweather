@@ -9,7 +9,7 @@ import kg.tutorialapp.myweather.models.ForeCast
 
 @Dao
 interface ForeCastDao {
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(forecast: ForeCast)
 
     @Update
@@ -19,7 +19,7 @@ interface ForeCastDao {
     fun delete(forecast: ForeCast): Completable
 
     @Query("select * from ForeCast")
-    fun getAll(): LiveData<List<ForeCast>>
+    fun getAll(): LiveData<ForeCast>
 
     @Query("select * from ForeCast where id = :id")
     fun getById(id: Long): Single<ForeCast>
