@@ -5,4 +5,15 @@
     <string name="Button2">Show toast</string>
     <string name="Switch">Switch</string>
     <string name="checkbox">CheckBox</string>
+    <string name="insert">Insert</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="query">Query delete all</string>
+    <string name="queryId">QueryId</string>
+    <string name="query_get_all">Query get all</string>
+    <string name="forecast_list">Empty</string>
+    <string name="etID">id</string>
+    <string name="etLat">Lat</string>
+    <string name="etLong">Long</string>
+    <string name="etDescription">Description</string>
 </resources>
