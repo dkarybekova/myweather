@@ -16,4 +16,5 @@
     <string name="etLat">Lat</string>
     <string name="etLong">Long</string>
     <string name="etDescription">Description</string>
+    <string name="button">Button</string>
 </resources>
