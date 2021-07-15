@@ -1,6 +1,7 @@
 package kg.tutorialapp.myweather.di
 
 import android.content.Context
+import androidx.lifecycle.ViewModel
 import androidx.room.Room
 import kg.tutorialapp.myweather.network.WeatherApi
 import kg.tutorialapp.myweather.repo.WeatherRepo
@@ -16,7 +17,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 val vmModule = module {
-    viewModel { MainViewModel(get()) }
+    viewModel { MainViewModel(get())}
 }
 
 val dataModule = module{
@@ -24,7 +25,7 @@ val dataModule = module{
     single { provideHttpClient() }
     single { provideRetrofit(get()) }
     factory { provideWeatherApi(get()) }
-    factory{WeatherRepo(get(), get()) }
+    factory { WeatherRepo(get(), get()) }
 }
 
 

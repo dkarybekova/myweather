@@ -12,7 +12,7 @@ import kg.tutorialapp.myweather.models.Constants
 import kg.tutorialapp.myweather.models.ForeCast
 import kg.tutorialapp.myweather.ui.rv.DailyForeCastAdapter
 import kg.tutorialapp.myweather.ui.rv.HourlyForeCastAdapter
-import org.koin.androidx.viewmodel.ext.android.getViewModel
+import org.koin.android.viewmodel.ext.android.getViewModel
 import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        vm = getViewModel (MainViewModel::class)
+        vm = getViewModel(MainViewModel::class)
         setupViews()
         setupRecyclerViews()
         subscribeToLiveData()
