@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "721039316618",
+    "project_id": "weather-dbc51",
+    "storage_bucket": "weather-dbc51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721039316618:android:59e10b077304884d13ff73",
+        "android_client_info": {
+          "package_name": "kg.tutorialapp.myweather"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721039316618-jkcskb7m50rpjb6popf0ih2h9c7daiq6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9NB9Edf3dcPcBorhFjETaugFIuC_gqUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721039316618-jkcskb7m50rpjb6popf0ih2h9c7daiq6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

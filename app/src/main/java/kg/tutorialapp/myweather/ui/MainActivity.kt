@@ -2,9 +2,12 @@ package kg.tutorialapp.myweather.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
+import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.android.synthetic.main.activity_main.*
 import kg.tutorialapp.myweather.R
 import kg.tutorialapp.myweather.format
@@ -27,6 +30,14 @@ class MainActivity : AppCompatActivity() {
         setupViews()
         setupRecyclerViews()
         subscribeToLiveData()
+
+        FirebaseMessaging.getInstance().token.addOnSuccessListener {
+            Log.i("Token", it)
+        }
+
+        intent.getStringExtra("EXTRA")?.let {
+            Toast.makeText(this, it, Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun setupViews() {
